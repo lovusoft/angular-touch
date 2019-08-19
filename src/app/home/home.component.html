@@ -1,0 +1,145 @@
+<div class="layout">
+  <div class="main card">
+    <div class="tabs">
+      <a routerLink="/home/hot" routerLinkActive="active">热点</a>
+      <a routerLink="/home/roast" routerLinkActive="active">吐槽</a>
+      <a routerLink="/home/learn" routerLinkActive="active">学习</a>
+      <a routerLink="/home/find" routerLinkActive="active">寻觅</a>
+      <a routerLink="/home/together" routerLinkActive="active">有约</a>
+      <a routerLink="/home/mind" routerLinkActive="active">思绪</a>
+      <a routerLink="/home/secret" routerLinkActive="active">树洞</a>
+    </div>
+    <router-outlet></router-outlet>
+  </div>
+  <div class="side">
+    <div class="slogan card" *ngIf="!status">
+      <div class="cell">
+        <strong>Touch me , touch the world</strong>
+        <div class="sep"></div>
+        <span class="fade">我们在一起</span>
+      </div>
+      <div class="content">
+        <small>这是一个兴趣、日常生活导向的校园社区。我们希望在将来，它能成为大学日常生活的一部分。</small>
+      </div>
+    </div>
+    <div class="slogan card" *ngIf="status">
+      <div class="cell">
+        <div class="userInfo">
+          <img src="https://area.sinaapp.com/bingImg/" alt="Avatar Not Found">
+          <div class="fade">
+            <div>
+              <a routerLink="/">{{user.userName}}</a>
+            </div>
+            <span>念你成疾，药石无医</span>
+          </div>
+        </div>
+      </div>
+      <div class="cell">
+        <div class="social fade">
+          <a routerLink="/">好友</a>
+          <a routerLink="/">收藏</a>
+          <a routerLink="/">黑名单</a>
+        </div>
+      </div>
+      <div class="new content fade">
+        <a routerLink="/">我的消息</a>
+        <small>未处理：{{user.messages}}</small>
+        <a routerLink="/">Dogecoin</a>
+        <small>{{user.coin}} doge</small>
+      </div>
+    </div>
+    <div class="tool card">
+      <div class="cell">
+        <span class="fade">touch小工具</span>
+      </div>
+      <div class="content">
+        <a routerLink="/drawer">个人艺术画</a>
+      </div>
+    </div>
+
+    <div class="nav tool card">
+      <div class="cell">
+        <span class="fade">touch资源推荐</span>
+      </div>
+      <div class="cell navCell navCellFirst">
+        <div class="navItem fade">
+          美图精选
+        </div>
+      </div>
+      <div class="content">
+        <a href="https://bing.ioliu.cn/" target="_blank">必应壁纸</a>
+        <a href="https://photo.ihansen.org/#/today" target="_blank">美图集</a>
+        <a href="https://www.pexels.com/" target="_blank">Pexels</a>
+        <a href="https://500px.me/" target="_blank">500px</a>
+        <a href="https://www.dpm.org.cn/lights/royal.html" target="_blank">故宫壁纸</a>
+        <a href="https://1x.com/" target="_blank">1x</a>
+        <a href="https://www.foodiesfeed.com/" target="_blank">Foodiesfeed</a>
+        <a href="http://www.polayoutu.com/collections" target="_blank">泼辣有图</a>
+        <a href="https://h.bilibili.com/" target="_blank">bilibili相簿</a>
+        <a href="https://photo.fengniao.com/" target="_blank">蜂鸟</a>
+        <a href="https://wall.alphacoders.com/?lang=Chinese" target="_blank">Wallpaper</a>
+      </div>
+      <div class="cell navCell">
+        <div class="navItem fade">
+          热搜热议
+        </div>
+      </div>
+      <div class="content">
+        <a href="https://s.weibo.com/top/summary?cate=realtimehot" target="_blank">微博热搜</a>
+        <a href="https://www.zhihu.com/billboard" target="_blank">知乎热议</a>
+        <a href="https://trends.so.com/hot" target="_blank">360趋势</a>
+        <a href="https://index.toutiao.com/" target="_blank">头条指数</a>
+        <a href="http://c.tieba.baidu.com/hottopic/browse/topicList?res_type=1" target="_blank">贴吧热议</a>
+        <a href="https://www.douban.com/group/explore" target="_blank">豆瓣讨论</a>
+      </div>
+      <div class="cell navCell">
+        <div class="navItem fade">
+          教程文档
+        </div>
+      </div>
+      <div class="content">
+        <a href="https://www.runoob.com/" target="_blank">菜鸟教程</a>
+        <a href="https://angular.cn/start" target="_blank">Angular</a>
+        <a href="https://cn.vuejs.org/" target="_blank">Vue</a>
+        <a href="https://www.iviewui.com/" target="_blank">iView</a>
+        <a href="https://ant.design/" target="_blank">Ant Design</a>
+        <a href="https://spring.io/" target="_blank">Spring</a>
+        <a href="https://flutter.dev/" target="_blank">Flutter</a>
+        <a href="https://golang.org/doc/" target="_blank">Go</a>
+        <a href="https://gin-gonic.com/zh-cn/docs/" target="_blank">Gin</a>
+        <a href="https://tensorflow.google.cn/" target="_blank">Tensorflow</a>
+      </div>
+      <div class="cell navCell">
+        <div class="navItem fade">
+          实用资源
+        </div>
+      </div>
+      <div class="content">
+        <a href="https://leetcode-cn.com/" target="_blank">Leetcode</a>
+        <a href="https://www.processon.com/" target="_blank">Processon</a>
+        <a href="https://www.jetbrains.com/" target="_blank">Jetbrains</a>
+        <a href="https://www.jsdelivr.com/" target="_blank">jsDelivr</a>
+        <a href="http://www.iconfont.cn/" target="_blank">阿里矢量图</a>
+        <a href="https://yarnpkg.com/zh-Hans/" target="_blank">yarn</a>
+        <a href="https://www.easy-mock.com/" target="_blank">EsayMock</a>
+        <a href="https://fonts.google.com/" target="_blank">谷歌字体</a>
+        <a href="http://fontmap.ideo.com/" target="_blank">FontMap</a>
+        <a href="https://webgradients.com/" target="_blank">WebGradients</a>
+        <a href="http://www.sina.lt/" target="_blank">新浪短网址</a>
+        <a href="https://distrowatch.com/" target="_blank">Distrowatch</a>
+        <a href="https://wiki.archlinux.org" target="_blank">Arch Linux Wiki</a>
+        <a href="https://opsx.alibaba.com/mirror?lang=zh-CN" target="_blank">阿里巴巴开源镜像</a>
+        <a href="http://www.fontawesome.com.cn/faicons/" target="_blank">Font Awesome</a>
+        <a href="https://www.toolfk.com/" target="_blank">ToolFk</a>
+        <a href="https://cloud.tencent.com" target="_blank">腾讯云</a>
+        <a href="https://goproxy.io/zh/" target="_blank">GOPROXY</a>
+      </div>
+    </div>
+
+    <div class="feedback card">
+      <div class="cell">
+        <span class="fade">反馈-举报-优化建议</span>
+      </div>
+    </div>
+  </div>
+</div>

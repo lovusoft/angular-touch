@@ -1,0 +1,144 @@
+.tabs {
+  padding: 10px;
+  font-size: 14px;
+  line-height: 150%;
+  text-align: left;
+
+  a {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 14px;
+    text-decoration: none;
+    padding: 5px 8px;
+    margin-right: 5px;
+    border-radius: 3px;
+    color: #555;
+
+    &:hover {
+      background-color: rgba(167, 167, 222, 0.14);
+      color: #778087;
+      text-decoration: none;
+    }
+  }
+
+  .active {
+    background-color: #334;
+    color: #fff;
+
+    &:hover {
+      background-color: #44445c;
+      color: #fff;
+    }
+  }
+}
+
+
+.slogan {
+  min-height: 180px;
+}
+
+
+.userInfo {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  gap: 10px;
+
+  img {
+    cursor: pointer;
+    outline: none;
+    border-radius: 3px;
+    width: 48px;
+    height: 48px;
+  }
+
+  .fade {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    align-items: center;
+
+    a {
+      font-family: 楷体, serif;
+      font-size: 16px;
+    }
+
+    span {
+      align-self: start;
+    }
+  }
+}
+
+.social {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+}
+
+.new {
+  font-size: 14px;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+
+  small {
+    align-self: center;
+    justify-self: end;
+    color: #778087;
+    font-size: 12px;
+  }
+
+  a {
+    color: #778087;
+    outline: none;
+    text-decoration: none;
+
+    &:hover {
+      color: #4d5256;;
+      text-decoration: underline;
+    }
+  }
+}
+
+.feedback {
+  height: 320px;
+}
+
+.tool {
+  min-height: 250px;
+
+  a {
+    display: inline-block;
+    cursor: pointer;
+    color: #778087;
+    background-color: transparent;
+    font-size: 12px;
+    padding: 2px 6px 2px 6px;
+    border-radius: 15px;
+    text-decoration: none;
+    outline: none;
+    border: 1px solid #e5e5e5;
+    margin: 0 5px 4px 0;
+
+    &:hover {
+      color: #555;
+      border: 1px solid #ccc;
+    }
+  }
+}
+
+.nav {
+  .navCell {
+    border-bottom: none;
+    border-top: 1px solid #e2e2e2;
+
+    .navItem {
+      display: block;
+      text-align: center;
+    }
+  }
+
+  .navCellFirst {
+    border: none;
+  }
+}
+

@@ -1,0 +1,49 @@
+<div class="layout">
+  <div class="main card">
+    <div class="cell">
+        <span class="fade">
+          <a routerLink="/">touch</a>
+          <span class="chevron"> › </span>login
+        </span>
+    </div>
+    <div class="content">
+      <form [formGroup]="loginForm" (ngSubmit)="login()">
+        <div class="label">
+          用户名
+        </div>
+        <label>
+          <input type="text" formControlName="userId" placeholder="用户名或电子邮箱地址" required>
+        </label>
+        <span></span>
+        <div class="label">
+          密码
+        </div>
+        <label>
+          <input type="password" formControlName="userPassword" placeholder="密码" required>
+        </label>
+        <span></span>
+        <div class="label">
+          人机验证
+        </div>
+        <img src="https://cn.bing.com/th?id=OIP.jWnIf3PRczKck6oUjgaTdQHaEo&pid=Api&rs=1"
+             alt="Verification Code Image Not Get,Please flush this page later">
+        <span></span>
+        <span></span>
+        <label>
+          <input type="text" formControlName="verificationCode" placeholder="请输入上图验证码" required>
+        </label>
+        <span>
+          <small *ngIf="verificationStatus===false">验证码错误</small>
+        </span>
+        <span></span>
+        <input class="submit" type="submit" [disabled]="!loginForm.valid" value="登录">
+        <span></span>
+        <span></span>
+        <div class="retrievePassword">
+          <a routerLink="/">找回密码</a>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="side"></div>
+</div>
